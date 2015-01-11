@@ -1,15 +1,39 @@
-angular.module('calApp', [])
-  .controller('CalController', ['$scope', function($scope) {
-  	$scope.days = [
-  		new Day("lundi", "lune"),
-  		new Day("mardi", "mars"),
-  		new Day("mercredi", "mercure"),
-  		new Day("jeudi", "jupiter"),
-  		new Day("vendredi", "venus"),
-  		new Day("samedi", "saturne"),
-  		new Day("dimanche", "soleil"),
-  	];
- }]);
+var app = angular.module('calApp', []);
+
+app.factory('calService', ['$http',
+  function($http) {
+    this.getDays = function(date) {
+      if (date == null || !(date instanceof Date) ) {
+        date = new Date();
+      }
+
+      var day = date.getDay();
+      var days = [];
+      for (var i = 0; i < 7; i++) {
+        days[i] = date.setDate(date.getDate() - day + i);
+      }
+
+      return days;
+    };
+
+    this.getEvents = function() {
+      //here I use $http to get the list of events
+      events = ["lune", "mars", "mercure", "jupiiter", "venus", "satyurne", "soleil"];
+      return events;
+    };
+  }
+]);
+
+app.controller('CalController', ['$scope', 'calService',
+  function($scope) {
+
+    daysName = calService.getDays();
+    daysEvents = calService.getEvents();
+    for (var i = 0; i < 7; i++) {
+      $scope.days[i] = new Day(daysName[i], daysEvents[i]);
+    };
+ }
+]);
 
 function Day(name, content) {
 	this.name = name;
