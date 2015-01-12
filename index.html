@@ -12,8 +12,8 @@
     <div id="calendar-wrapper" class="container-fluid" ng-controller="CalController" style="height: 600px;">
       <div class="row" style="height: 100%">
         <div ng-repeat="day in days" class="col-md-1 no-padding" style="height: 600px;">
-          <div class="header">{{day.name}}</div>
-          <div class="content">{{day.content}}</div>
+          <div class="header">{{day.getName()}}</div>
+          <div class="content">{{day.getContent()}}</div>
         </div>
       </div>
     </div>

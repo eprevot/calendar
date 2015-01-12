@@ -1,43 +1,64 @@
 var app = angular.module('calApp', []);
+app.controller('CalController', function($scope, weekService, eventsService) {
+	var daysTime = weekService.getDays();
+	var daysEvents = eventsService.getEvents();
+	$scope.days = [];
+	for (var i = 0; i < 7; i++) {
+		$scope.days[i] = new Day(daysTime[i], daysEvents[i]);
+	}
+});
 
-app.factory('calService', ['$http',
-  function($http) {
-    this.getDays = function(date) {
-      if (date == null || !(date instanceof Date) ) {
-        date = new Date();
-      }
+app.factory('weekService', function() {
+	
+	//Transform english numerotation day (0=sunday, 1=monday, …, 6=saturday)
+	//to french days (0=monday, 1=tuesday, …, 6=sunday)
+	function engToFrenchDay(day)
+	{
+		return (day+6)%7;
+	}
+	
+	return {
+		getDays : function(date) {
+			var days = [];
+			if (date == null || !(date instanceof Date) ) {
+				date = new Date();
+			}
+		
+			var day = engToFrenchDay(date.getDay());
+			var frenchi;
+			for (var i = 0; i < 7; i++) {
+				frenchi = engToFrenchDay(i);
+				days[frenchi] = new Date(date.getTime() + (frenchi-day) * 86400000);//1 day = 24*60*60*1000 ms
+			}
+			
+			return days;
+		}
+	};
+});
 
-      var day = date.getDay();
-      var days = [];
-      for (var i = 0; i < 7; i++) {
-        days[i] = date.setDate(date.getDate() - day + i);
-      }
+app.factory('eventsService', function($http) {
+   	return {
+   		getEvents : function($http) {
+   	        //here I use $http to get the list of events from server
+   	        events = ["lune", "mars", "mercure", "jupiter", "venus", "saturne", "soleil"];
+   	        return events;
+   		}
+   	};
+});
 
-      return days;
-    };
 
-    this.getEvents = function() {
-      //here I use $http to get the list of events
-      events = ["lune", "mars", "mercure", "jupiiter", "venus", "satyurne", "soleil"];
-      return events;
-    };
-  }
-]);
-
-app.controller('CalController', ['$scope', 'calService',
-  function($scope) {
-
-    daysName = calService.getDays();
-    daysEvents = calService.getEvents();
-    for (var i = 0; i < 7; i++) {
-      $scope.days[i] = new Day(daysName[i], daysEvents[i]);
-    };
- }
-]);
-
-function Day(name, content) {
-	this.name = name;
-	this.content = content;
+function Day(timestamp, content) {
+	//private attr
+	var timestamp = timestamp;
+	var content = content;
+	
+	//public methods
+	this.getName = function() {
+		return timestamp.toDateString();
+	};
+	this.getContent = function() {
+		return content;
+	};
 }
 
 function Calendar(container, start_date, events) {
