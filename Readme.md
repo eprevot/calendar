@@ -1,4 +1,4 @@
-## Test Front End Developer @ Doctolib
+##  Test Front End Developer @ Doctolib
 Coder en pur Javascript une classe qui permet d'afficher un agenda en vue semaine qui affiche les événements qui lui sont passés en argument.
 ``` javascript
 new Calendar('#calendar-wrapper', new Date(2014, 9, 6),
