@@ -32,14 +32,14 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .container {
     max-width: 730px;
   }
 }
 .container-narrow > hr {
   margin: 30px 0;
-}
+}*/
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -76,18 +76,4 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
-}
-
-.cal-header {
-  background-color: #c4c4c4;
-  text-align: center;;
-}
-
-.cal-content {
-  background-color: #757575;
-  height: 100%;
-}
-
-.no-padding {
-  padding: 0;
 }
