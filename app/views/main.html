@@ -1,0 +1,9 @@
+<div id="calendar-wrapper" class="container-fluid" ng-controller="MainCtrl" style="height: 600px;">
+  <div class="row" style="height: 100%">
+    <div ng-repeat="day in days" class="col-md-1 no-padding" style="height: 600px;">
+      <div class="cal-header">{{day.getName()}}</div>
+      <div class="cal-content">{{day.getContent()}}</div>
+    </div>
+  </div>
+</div>
+
