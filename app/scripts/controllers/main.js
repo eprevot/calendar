@@ -1,16 +1,14 @@
 'use strict';
 
-function Day(timestamp, content) {
+function Day(timestamp, events) {
 	//public methods
 	this.getName = function() {
 		return timestamp.toDateString();
 	};
-	this.getContent = function() {
-		return content;
+	this.getEvents = function() {
+		return events;
 	};
 }
-
-
 
 /**
  * @ngdoc function
@@ -26,7 +24,7 @@ angular.module('calendarApp')
 			var divs = [];
 			for (var i = 0; i < events.length; i++) {
 				var event = new Event(events[i]);
-				event.getTitle
+				//create div with content=event.title, and style from event.getHeight, event.getTop...
 			}			
 		}
 
