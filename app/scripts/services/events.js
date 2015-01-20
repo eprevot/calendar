@@ -15,7 +15,7 @@ angular.module('calendarApp')
         var events = [
 			new Event( new Date(2015, 0, 20, 9, 30), new Date(2015, 0, 20, 14, 0), 'Al Di Meola'),
 	    	new Event( new Date(2015, 0, 21, 9, 15), new Date(2015, 0, 21, 12, 30), 'Paco De Lucia'),
-	    	new Event( new Date(2015, 0, 22, 12, 0), new Date(2015, 0, 22, 15, 30), 'John McLaughlin'),
+	    	new Event( new Date(2015, 0, 24, 12, 0), new Date(2015, 0, 24, 15, 30), 'John McLaughlin'),
 	    	new Event( new Date(2015, 0, 24, 15, 0), new Date(2015, 0, 24, 18, 30), 'Django Reinhardt')
 		];
         return events;
