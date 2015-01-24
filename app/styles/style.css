@@ -5540,6 +5540,7 @@ button.close {
 .cal-content {
   background-color: #757575;
   height: 100%;
+  position: relative;
 }
 .no-padding {
   padding: 0;
