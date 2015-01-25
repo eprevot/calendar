@@ -21,6 +21,19 @@ angular.module('calendarApp')
         return events;
     }
 
+    function setConcurrent(events) {
+    	events.sort( function(a,b) {
+    		return a.getStartDate() - b.getStartDate();
+    	});
+    	events.forEach( function(element, index, array) {
+    		if(index < array.length-1) {
+    			for (var i = index; i < array.length; i++) {
+    				element.setConcurrent(element.getConcurrent()+1);
+    			};
+    		}
+    	});
+    }
+
     function Event(startDate, endDate, title) {
 		//public methods
 		this.getStartDate = function() {
