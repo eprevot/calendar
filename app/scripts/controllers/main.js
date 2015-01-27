@@ -19,15 +19,6 @@ function Day(timestamp, events) {
  */
 angular.module('calendarApp')
 	.controller('MainCtrl', function($scope, week, events) {
-
-		function displayEvents(events) {
-			var divs = [];
-			for (var i = 0; i < events.length; i++) {
-				var event = new Event(events[i]);
-				//create div with content=event.title, and style from event.getHeight, event.getTop...
-			}			
-		}
-
 		var daysTime = week.getDays();
 		$scope.days = [];
 		for (var i = 0; i < 7; i++) {
