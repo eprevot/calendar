@@ -1,9 +1,9 @@
-<div id="calendar-wrapper" class="container-fluid" ng-controller="MainCtrl" style="height: 600px;">
+<div id="calendar-wrapper" class="container-fluid cal-wrapper" ng-controller="MainCtrl" style="height: 600px;">
   <div class="row" style="height: 100%">
     <div ng-repeat="day in days" class="col-md-1 no-padding" style="height: 600px;">
       <div class="cal-header">{{day.getName()}}</div>
       <div class="cal-content">
-      	<div ng-repeat="event in day.getEvents()" class="well" style="position: absolute; top:{{event.getPercentTop()}}%; height:{{event.getPercentHeight()}}%; width:{{event.getPercentWidth()}}%; left:{{event.getPercentLeft()}}%; z-index:{{event.getZindex()}}; background-color:#ad3850; text-overflow:ellipsis; overflow:hidden; padding:5px;">{{event.getStartDate().getHours()}}h{{event.getStartDate().getMinutes()}} : {{event.getTitle()}}</div>
+      	<div ng-repeat="event in day.getEvents()" class="event" style="top:{{event.getPercentTop()}}%; height:{{event.getPercentHeight()}}%; width:{{event.getPercentWidth()}}%; left:{{event.getPercentLeft()}}%; z-index:{{event.getZindex()}};">{{event.getStartDate().getHours()}}h{{event.getStartDate().getMinutes()}} : {{event.getTitle()}}</div>
       </div>
     </div>
   </div>

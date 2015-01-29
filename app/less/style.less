@@ -1,15 +1,52 @@
+@import "custom-bootstrap.less";
+
 .cal-header {
-  background-color: #c4c4c4;
+  background-color: #dcdcdc;
   text-align: center;
+  border-top-left-radius: @border-radius-large;
+  border-top-right-radius: @border-radius-large;
 }
 
 .cal-content {
-  background-color: #757575;
+  background-color: #ffffff;
   height: 100%;
   position: relative;
+  border-right: 1px solid #595959;
+  border-left: 1px solid #595959;
+  border-bottom: 1px solid #595959;
+  border-bottom-left-radius: @border-radius-large;
+  border-bottom-right-radius: @border-radius-large;
+}
+
+.cal-wrapper {
+  border-radius: @border-radius-large;
+}
+
+.event {
+  .well;
+  .truncate;
+
+  position: absolute; 
+  background-color:#428bca;
+  color: #ffffff;
 }
 
 .no-padding {
   padding: 0;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+.footer > a {
+  margin-left: 10px;
 }
 
