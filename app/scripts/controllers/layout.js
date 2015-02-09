@@ -8,15 +8,12 @@
  * Controller of the calendarApp layout
  */
 angular.module('calendarApp')
-	.controller('LayoutCtrl', function($scope, $location) {
+	.controller('LayoutCtrl', function($scope, $rootScope) {
 
-		function menuClicked($state) {
-			$scope.homeActive = $state === '/';
-			$scope.aboutActive = $state === '/about';			
-		}
-		$scope.menuClicked = menuClicked;
-
-		menuClicked($location.path());
+		$rootScope.$on('$routeChangeSuccess', function (event, current) {
+			$scope.aboutActive = current.originalPath === '/about';			
+			$scope.homeActive = !$scope.aboutActive;
+		});
 	});
 
 
