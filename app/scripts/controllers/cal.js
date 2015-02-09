@@ -18,7 +18,7 @@ function Day(timestamp, events) {
  * Controller of the calendarApp
  */
 angular.module('calendarApp')
-	.controller('MainCtrl', function($scope, week, events) {
+	.controller('CalCtrl', function($scope, week, events) {
 		var daysTime = week.getDays();
 		$scope.days = [];
 		for (var i = 0; i < 7; i++) {

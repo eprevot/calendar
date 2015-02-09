@@ -23,11 +23,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container" ng-controller="LayoutCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
+          <li ng-class="{ active: homeActive }" ng-click="menuClicked('/')"><a ng-href="#">Home</a></li>
+          <li ng-class="{ active: aboutActive }" ng-click="menuClicked('/about')"><a ng-href="#/about">About</a></li>
         </ul>
         <h3 class="text-muted">calendar</h3>
       </div>
@@ -77,7 +77,8 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/layout.js"></script>
+        <script src="scripts/controllers/cal.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/week.js"></script>
         <script src="scripts/services/events.js"></script>
