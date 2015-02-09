@@ -9,6 +9,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -22,12 +23,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container" ng-controller="LayoutCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+          <li ng-class="{ active: homeActive }" ng-click="menuClicked('/')"><a ng-href="#">Home</a></li>
+          <li ng-class="{ active: aboutActive }" ng-click="menuClicked('/about')"><a ng-href="#/about">About</a></li>
         </ul>
         <h3 class="text-muted">calendar</h3>
       </div>
@@ -35,7 +35,10 @@
       <div ng-view=""></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from Elodie Prevot</p>
+        Elodie Prevot
+        <a href="mailto:elodie_prevot@yahoo.fr"><span class="fa fa-envelope"></span></a>
+        <a href="https://fr.linkedin.com/pub/elodie-prevot/8a/142/422"><span class="fa fa-linkedin"></span></a>
+        <a href="https://github.com/eprevot"><span class="fa fa-github"></span></a>
       </div>
     </div>
 
@@ -74,7 +77,8 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/layout.js"></script>
+        <script src="scripts/controllers/cal.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/week.js"></script>
         <script src="scripts/services/events.js"></script>
