@@ -1,4 +1,15 @@
-<div id="calendar-wrapper" class="container-fluid cal-wrapper" ng-controller="CalCtrl" style="height: 600px;">
+<div class="container cal-wrapper" ng-controller="CalCtrl">
+  <div class="row">
+	<div class="col-md-3 text-right" style="padding: 10px 0px" ng-click="prevWeek()">
+		<span class="fa fa-chevron-left"></span>
+	</div>
+	<div class="col-md-1 text-center" style="padding: 10px 0px">
+		Week of {{currentDate | date:'yyyy-MM-dd'}}
+	</div>
+	<div class="col-md-3 text-left" style="padding: 10px 0px" ng-click="nextWeek()">
+		<span class="fa fa-chevron-right"></span>
+	</div>
+  </div>
   <div class="row" style="height: 100%">
     <div ng-repeat="day in days" class="col-md-1 no-padding" style="height: 600px;">
       <div class="cal-header">{{day.getName()}}</div>

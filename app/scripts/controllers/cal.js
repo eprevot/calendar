@@ -19,7 +19,10 @@ function Day(timestamp, events) {
  */
 angular.module('calendarApp')
 	.controller('CalCtrl', function($scope, week, events) {
-		var daysTime = week.getDays();
+		var currentDate = new Date();
+		var daysTime = week.getDays(currentDate);
+
+		$scope.currentDate = currentDate;
 		$scope.days = [];
 		for (var i = 0; i < 7; i++) {
 			$scope.days[i] = new Day(daysTime[i], events.getEventsForDay(daysTime[i]));
