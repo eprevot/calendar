@@ -8,7 +8,7 @@
  * Factory in the calendarApp.
  */
 angular.module('calendarApp')
-  .factory('events', function (/*$http*/) {
+  .factory('events', ['$http', function ($http) {
 
     function Event(startDate, endDate, title) {
       //private members
@@ -48,8 +48,11 @@ angular.module('calendarApp')
       };
     }
 
-  	function getAllEvents() {
+  	function getAllEvents($http) {
         //here I use $http to get the list of events from server
+        /*$http.get('data/events.json').success(function(data) {
+          $scope.phones = data;
+        });*/
         var events = [
         new Event( new Date(2015, 0, 26, 9, 30), new Date(2015, 0, 26, 14, 0), 'Al Di Meola'),
 	    	new Event( new Date(2015, 0, 27, 9, 15), new Date(2015, 0, 27, 12, 30), 'Paco De Lucia'),
@@ -112,4 +115,4 @@ angular.module('calendarApp')
       	return dayEvents;
       }
     };
-  });
+  }]);
