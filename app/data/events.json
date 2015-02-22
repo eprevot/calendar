@@ -14,7 +14,7 @@
   			"hour": 14,
   			"minute": 0
   		},
-  	"name": 'Al Di Meola'
+  	"name": "Al Di Meola"
  },
  {
   "start": {
@@ -31,7 +31,7 @@
   			"hour": 12,
   			"minute": 30
   		},
-  	"name": 'Paco De Lucia'
+  	"name": "Paco De Lucia"
  },
  {
   "start": {
@@ -48,7 +48,7 @@
   			"hour": 11,
   			"minute": 30
   		},
-  	"name": 'John McLaughlin'
+  	"name": "John McLaughlin"
  },
  {
   "start": {
@@ -65,7 +65,7 @@
   			"hour": 16,
   			"minute": 0
   		},
-  	"name": 'Paul McLaughlin'
+  	"name": "Paul McLaughlin"
  },
  {
   "start": {
@@ -82,7 +82,7 @@
   			"hour": 15,
   			"minute": 30
   		},
-  	"name": 'George McLaughlin'
+  	"name": "George McLaughlin"
  },
  {
   "start": {
@@ -99,7 +99,7 @@
   			"hour": 20,
   			"minute": 0
   		},
-  	"name": 'Ringo McLaughlin'
+  	"name": "Ringo McLaughlin"
  },
  {
   "start": {
@@ -116,6 +116,6 @@
   			"hour": 21,
   			"minute": 15
   		},
-  	"name": 'Django Reinhardt'
+  	"name": "Django Reinhardt"
  }
 ]

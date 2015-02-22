@@ -20,12 +20,22 @@ function Day(timestamp, events) {
 angular.module('calendarApp')
 	.controller('CalCtrl', function($scope, week, events) {
 
+		//private members
+		var currentDate;
+		var daysTime;
+
 		function setDays() {
 			$scope.currentDate = currentDate;
 			$scope.days = [];
 			for (var i = 0; i < 7; i++) {
 				$scope.days[i] = new Day(daysTime[i], events.getEventsForDay(daysTime[i]));
 			}
+		}
+
+		function init() {
+			currentDate = new Date();
+			daysTime = week.getDays(currentDate);
+			setDays();
 		}
 
 		$scope.prevWeek = function() {
@@ -40,10 +50,5 @@ angular.module('calendarApp')
 			setDays();
 		};
 
-		var currentDate = new Date();
-		var daysTime = week.getDays(currentDate);
-		setDays();
+		events.getAllEvents().promise.then(init);
 	});
-
-
-
