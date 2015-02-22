@@ -316,12 +316,13 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'data/*'
           ]
         }, {
           expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= yeoman.dist %>/images',
+          cwd: '.tmp/data',
+          dest: '<%= yeoman.dist %>/data',
           src: ['generated/*']
         }, {
           expand: true,

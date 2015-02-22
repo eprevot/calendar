@@ -8,7 +8,7 @@
  * Factory in the calendarApp.
  */
 angular.module('calendarApp')
-  .factory('events', function (/*$http*/) {
+  .factory('events', ['$http', '$q', function ($http, $q) {
 
     function Event(startDate, endDate, title) {
       //private members
@@ -48,8 +48,7 @@ angular.module('calendarApp')
       };
     }
 
-  	function getAllEvents() {
-        //here I use $http to get the list of events from server
+  	/*function getAllEvents($http) {
         var events = [
         new Event( new Date(2015, 0, 26, 9, 30), new Date(2015, 0, 26, 14, 0), 'Al Di Meola'),
 	    	new Event( new Date(2015, 0, 27, 9, 15), new Date(2015, 0, 27, 12, 30), 'Paco De Lucia'),
@@ -61,6 +60,26 @@ angular.module('calendarApp')
         new Event( new Date(2015, 0, 30, 19, 30), new Date(2015, 0, 30, 20, 0), 'Django Reinhardt5')
 		];
         return events;
+    }*/
+
+    function createEvents(data) {
+      var events = [];
+      for (var i = 0; i < data.length; i++) {
+        events.push(new Event( new Date(data[i].start.year,
+                                        data[i].start.month,
+                                        data[i].start.day,
+                                        data[i].start.hour,
+                                        data[i].start.minute),
+                               new Date(data[i].end.year,
+                                        data[i].end.month,
+                                        data[i].end.day,
+                                        data[i].end.hour,
+                                        data[i].end.minute),
+                               data[i].name
+                              )
+                    );
+      }
+      return events;
     }
 
     function setConcurrent(events) {
@@ -99,17 +118,29 @@ angular.module('calendarApp')
     	});
     }
 
+    //private members
+    var events;
+
     return {
       getEventsForDay : function(date) {
-      	var events = getAllEvents();
-      	var dayEvents = [];
-      	for (var i = 0; i < events.length; i++) {
-      		if(events[i].getStartDate().toDateString() === date.toDateString() || events[i].getEndDate().toDateString() === date.toDateString()) {
-      			dayEvents.push(events[i]);
-      		}
-      	}
+        var dayEvents = [];
+        for (var i = 0; i < events.length; i++) {
+          if(events[i].getStartDate().toDateString() === date.toDateString() || events[i].getEndDate().toDateString() === date.toDateString()) {
+            dayEvents.push(events[i]);
+          }
+        }
         setConcurrent(dayEvents);
-      	return dayEvents;
+        return dayEvents;
+      },
+      getAllEvents : function() {
+        // perform some asynchronous operation, resolve or reject the promise when appropriate.
+        var deferred = $q.defer();
+        //use $http to get the list of events from server
+        $http.get('data/events.json').success(function(data) {
+          events = createEvents(data);
+          deferred.resolve();
+        });
+        return deferred;
       }
     };
-  });
+  }]);
