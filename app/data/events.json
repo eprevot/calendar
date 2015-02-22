@@ -3,14 +3,14 @@
   "start": {
   			"year": 2015,
   			"month": 1,
-  			"day": 16,
+  			"day": 23,
   			"hour": 9,
   			"minute": 30
   			},
   "end": {
   			"year": 2015,
   			"month": 1,
-  			"day": 16,
+  			"day": 23,
   			"hour": 14,
   			"minute": 0
   		},
@@ -20,14 +20,14 @@
   "start": {
   			"year": 2015,
   			"month": 1,
-  			"day": 17,
+  			"day": 24,
   			"hour": 9,
   			"minute": 15
   			},
   "end": {
   			"year": 2015,
   			"month": 1,
-  			"day": 17,
+  			"day": 24,
   			"hour": 12,
   			"minute": 30
   		},
@@ -37,14 +37,14 @@
   "start": {
   			"year": 2015,
   			"month": 1,
-  			"day": 20,
+  			"day": 27,
   			"hour": 10,
   			"minute": 0
   			},
   "end": {
   			"year": 2015,
   			"month": 1,
-  			"day": 20,
+  			"day": 27,
   			"hour": 11,
   			"minute": 30
   		},
@@ -54,14 +54,14 @@
   "start": {
   			"year": 2015,
   			"month": 1,
-  			"day": 20,
+  			"day": 27,
   			"hour": 11,
   			"minute": 0
   			},
   "end": {
   			"year": 2015,
   			"month": 1,
-  			"day": 20,
+  			"day": 27,
   			"hour": 16,
   			"minute": 0
   		},
@@ -71,14 +71,14 @@
   "start": {
   			"year": 2015,
   			"month": 1,
-  			"day": 20,
+  			"day": 27,
   			"hour": 14,
   			"minute": 0
   			},
   "end": {
   			"year": 2015,
   			"month": 1,
-  			"day": 20,
+  			"day": 27,
   			"hour": 15,
   			"minute": 30
   		},
@@ -88,32 +88,236 @@
   "start": {
   			"year": 2015,
   			"month": 1,
-  			"day": 20,
+  			"day": 27,
   			"hour": 18,
   			"minute": 45
   			},
   "end": {
   			"year": 2015,
   			"month": 1,
-  			"day": 20,
+  			"day": 27,
   			"hour": 20,
   			"minute": 0
   		},
   	"name": "Ringo McLaughlin"
  },
+  {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 3,
+        "hour": 6,
+        "minute": 30
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 3,
+        "hour": 10,
+        "minute": 0
+      },
+    "name": "Al Di Meola"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 4,
+        "hour": 8,
+        "minute": 15
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 4,
+        "hour": 11,
+        "minute": 30
+      },
+    "name": "Paco De Lucia"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 7,
+        "hour": 9,
+        "minute": 0
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 7,
+        "hour": 10,
+        "minute": 30
+      },
+    "name": "John McLaughlin"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 7,
+        "hour": 10,
+        "minute": 0
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 7,
+        "hour": 15,
+        "minute": 0
+      },
+    "name": "Paul McLaughlin"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 7,
+        "hour": 13,
+        "minute": 0
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 7,
+        "hour": 14,
+        "minute": 30
+      },
+    "name": "George McLaughlin"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 7,
+        "hour": 17,
+        "minute": 45
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 7,
+        "hour": 19,
+        "minute": 0
+      },
+    "name": "Ringo McLaughlin"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 11,
+        "hour": 10,
+        "minute": 30
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 11,
+        "hour": 15,
+        "minute": 0
+      },
+    "name": "Al Di Meola"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 12,
+        "hour": 10,
+        "minute": 15
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 12,
+        "hour": 13,
+        "minute": 30
+      },
+    "name": "Paco De Lucia"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 15,
+        "hour": 11,
+        "minute": 0
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 15,
+        "hour": 12,
+        "minute": 30
+      },
+    "name": "John McLaughlin"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 15,
+        "hour": 12,
+        "minute": 0
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 15,
+        "hour": 17,
+        "minute": 0
+      },
+    "name": "Paul McLaughlin"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 15,
+        "hour": 15,
+        "minute": 0
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 15,
+        "hour": 16,
+        "minute": 30
+      },
+    "name": "George McLaughlin"
+ },
+ {
+  "start": {
+        "year": 2015,
+        "month": 2,
+        "day": 15,
+        "hour": 19,
+        "minute": 45
+        },
+  "end": {
+        "year": 2015,
+        "month": 2,
+        "day": 15,
+        "hour": 21,
+        "minute": 0
+      },
+    "name": "Ringo McLaughlin"
+ },
  {
   "start": {
   			"year": 2015,
-  			"month": 1,
-  			"day": 25,
-  			"hour": 19,
+  			"month": 2,
+  			"day": 18,
+  			"hour": 20,
   			"minute": 0
   			},
   "end": {
   			"year": 2015,
-  			"month": 1,
-  			"day": 25,
-  			"hour": 21,
+  			"month": 2,
+  			"day": 18,
+  			"hour": 22,
   			"minute": 15
   		},
   	"name": "Django Reinhardt"
