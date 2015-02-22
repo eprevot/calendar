@@ -1,1 +1,1 @@
-rsync -avzn --delete-after --exclude=".git" --exclude="deploy.sh" ../calendar/dist/ .
+rsync -avz --delete-after --exclude=".git" --exclude="deploy.sh" ../calendar/dist/ .
