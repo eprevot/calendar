@@ -1,4 +1,13 @@
-##  Test Front End Developer @ Doctolib
+##  Angular demo
+This is a calendar, a little app to play with angular.
+### How to build
+1. Clone this project
+2. Run `pm install`
+3. Run `bower install`
+4. Run `grunt build`
+**And if you just want to see it working, [click here !](eprevot.github.io/calendar)
+###These were the original instructions
+#####  Test Front End Developer @ Doctolib
 Coder en pur Javascript une classe qui permet d'afficher un agenda en vue semaine qui affiche les événements qui lui sont passés en argument.
 ``` javascript
 new Calendar('#calendar-wrapper', new Date(2014, 9, 6),
