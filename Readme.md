@@ -5,7 +5,9 @@ This is a calendar, a little app to play with angular.
 2. Run `pm install`
 3. Run `bower install`
 4. Run `grunt build`
+
 **And if you just want to see it working, [click here !](eprevot.github.io/calendar)
+
 ###These were the original instructions
 #####  Test Front End Developer @ Doctolib
 Coder en pur Javascript une classe qui permet d'afficher un agenda en vue semaine qui affiche les événements qui lui sont passés en argument.
