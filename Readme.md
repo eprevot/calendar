@@ -2,7 +2,7 @@
 This is a calendar, a little app to play with angular.
 ### How to build
 1. Clone this project
-2. Run `pm install`
+2. Run `npm install`
 3. Run `bower install`
 4. Run `grunt build`
 
